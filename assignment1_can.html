@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ePortfolio - Full Stack Developer</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { background: #f8f9fa; }
+    section { padding: 60px 20px; }
+    .demo-box { padding: 20px; border: 1px solid #ddd; border-radius: 12px; background: #fff; margin-top: 20px; }
+    .todo-item { display: flex; justify-content: space-between; padding: 5px; }
+    .completed { text-decoration: line-through; color: gray; }
+    .badge-example { margin-right: 5px; }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">ePortfolio</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#fullstack">Full Stack</a></li>
+        <li class="nav-item"><a class="nav-link" href="#html">HTML</a></li>
+        <li class="nav-item"><a class="nav-link" href="#css">CSS</a></li>
+        <li class="nav-item"><a class="nav-link" href="#bootstrap">Bootstrap</a></li>
+        <li class="nav-item"><a class="nav-link" href="#javascript">JavaScript</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Full Stack Section -->
+<section id="fullstack">
+  <div class="container">
+    <h2>Full Stack Development</h2>
+    <p>Full Stack Development covers both <strong>front-end</strong> (HTML, CSS, JS) and <strong>back-end</strong> (server, database) technologies. A full-stack developer can design, implement, and deploy applications across the whole stack.</p>
+    <div class="demo-box">
+      <h5>Example Flow:</h5>
+      <pre>
+Browser → HTTP Request → Server (Node.js/PHP) → Database (MySQL/PostgreSQL)
+Response → Back to Browser → Rendered with HTML + CSS + JS
+      </pre>
+    </div>
+  </div>
+</section>
+
+<!-- HTML Section -->
+<section id="html" class="bg-light">
+  <div class="container">
+    <h2>HTML (HyperText Markup Language)</h2>
+    <p>HTML is the backbone of web pages. It defines the structure and content using elements like headings, paragraphs, links, images, and lists.</p>
+    <div class="demo-box">
+      <h5>Example:</h5>
+      <pre>
+&lt;h1&gt;Welcome to My Portfolio&lt;/h1&gt;
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;a href="#"&gt;Click Me&lt;/a&gt;
+      </pre>
+    </div>
+  </div>
+</section>
+
+<!-- CSS Section -->
+<section id="css">
+  <div class="container">
+    <h2>CSS (Cascading Style Sheets)</h2>
+    <p>CSS styles the content of HTML, controls layout, colors, fonts, spacing, and makes pages responsive.</p>
+    <div class="demo-box d-flex gap-3 flex-wrap">
+      <div class="p-3 text-white" style="background: steelblue; border-radius: 8px;">Card 1</div>
+      <div class="p-3 text-white" style="background: seagreen; border-radius: 8px;">Card 2</div>
+      <div class="p-3 text-white" style="background: tomato; border-radius: 8px;">Card 3</div>
+    </div>
+  </div>
+</section>
+
+<!-- Bootstrap Section -->
+<section id="bootstrap" class="bg-light">
+  <div class="container">
+    <h2>Bootstrap Framework</h2>
+    <p>Bootstrap is a CSS framework that provides a responsive grid, prebuilt components, and JavaScript plugins.</p>
+    <div class="demo-box">
+      <h5>Grid Example:</h5>
+      <div class="row">
+        <div class="col-md-4"><div class="card"><div class="card-body">Column 1</div></div></div>
+        <div class="col-md-4"><div class="card"><div class="card-body">Column 2</div></div></div>
+        <div class="col-md-4"><div class="card"><div class="card-body">Column 3</div></div></div>
+      </div>
+
+      <h5 class="mt-4">Buttons & Badges:</h5>
+      <button class="btn btn-primary me-2">Primary</button>
+      <button class="btn btn-success me-2">Success</button>
+      <span class="badge bg-danger badge-example">New</span>
+      <span class="badge bg-warning text-dark badge-example">Sale</span>
+
+      <h5 class="mt-4">Modal Example:</h5>
+      <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#demoModal">Open Modal</button>
+      <div class="modal fade" id="demoModal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header"><h5 class="modal-title">Bootstrap Modal</h5></div>
+            <div class="modal-body">This is a Bootstrap modal example.</div>
+            <div class="modal-footer"><button class="btn btn-danger" data-bs-dismiss="modal">Close</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JavaScript Section -->
+<section id="javascript">
+  <div class="container">
+    <h2>JavaScript</h2>
+    <p>JavaScript adds interactivity and dynamic behavior to web pages.</p>
+    <div class="demo-box">
+      <h5>To-Do List Example</h5>
+      <input type="text" id="taskInput" class="form-control mb-2" placeholder="Add a task...">
+      <button id="addTaskBtn" class="btn btn-success mb-3">Add Task</button>
+      <ul id="taskList" class="list-group"></ul>
+    </div>
+  </div>
+</section>
+
+<footer class="text-center p-4 bg-dark text-white">
+  © 2025 Student Name | ePortfolio
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // To-do list JS
+  const taskInput = document.getElementById("taskInput");
+  const addTaskBtn = document.getElementById("addTaskBtn");
+  const taskList = document.getElementById("taskList");
+
+  addTaskBtn.addEventListener("click", () => {
+    if (taskInput.value.trim() === "") return;
+    const li = document.createElement("li");
+    li.className = "list-group-item todo-item";
+    li.innerHTML = `<span>${taskInput.value}</span>
+                    <button class="btn btn-sm btn-danger">X</button>`;
+    li.querySelector("button").addEventListener("click", () => li.remove());
+    li.querySelector("span").addEventListener("click", () => li.querySelector("span").classList.toggle("completed"));
+    taskList.appendChild(li);
+    taskInput.value = "";
+  });
+</script>
+</body>
+</html>
